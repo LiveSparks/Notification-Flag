@@ -83,6 +83,9 @@ void sendDweet()
     while(client.available()){
       String line = client.readStringUntil('\r');
       Serial.print(line);
+      Serial.println("\nClosing Connection");
+      Serial.println("Going to Sleep for 10 min");
+      ESP.deepSleep(600*1000000);
     } 
 
     Serial.println("\nClosing Connection");
